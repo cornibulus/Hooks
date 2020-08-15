@@ -12,6 +12,7 @@ public class PullStateComponent : StateComponent {
     private bool shouldExit = false;
 
     public GameObject hook;
+    public GameObject ItemToPull { get; set; }
 
     IEnumerator Pull()
     {
@@ -33,6 +34,7 @@ public class PullStateComponent : StateComponent {
                 chains.RemoveLast();
                 Vector3 pos = chain.transform.position;
                 GameObject.Destroy(chain);
+                ItemToPull.transform.position = hook.transform.position;
                 hook.transform.position = pos;
             }
 
@@ -43,6 +45,11 @@ public class PullStateComponent : StateComponent {
 
     public override void Enter()
     {
+        if(this.chains.Count == 0)
+        {
+            this.shouldExit = true;
+            return;
+        }
         StartCoroutine(Pull());
     }
 
@@ -55,6 +62,7 @@ public class PullStateComponent : StateComponent {
     {
         StopAllCoroutines();
         this.shouldExit = false;
+        ItemToPull = null;
     }
 
     public override StateComponentType GetStateComponentType()

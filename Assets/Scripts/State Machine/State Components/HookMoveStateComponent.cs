@@ -31,7 +31,7 @@ public class HookMoveStateComponent : StateComponent
                 new Vector2(hook.transform.position.x, hook.transform.position.y) + this.moveDirection,
                 layerMask);
 
-            if(result == null)
+            if (result == null)
             {
                 //move
                 Vector3 oldPosition = hook.transform.position;
@@ -39,17 +39,18 @@ public class HookMoveStateComponent : StateComponent
                         hook.transform.position.x + this.moveDirection.x,
                         hook.transform.position.y + this.moveDirection.y
                     );
-                
+
                 GameObject instance = GameObject.Instantiate(chainPrefab);
                 pullStateComponent.chains.AddLast(instance);
                 instance.transform.position = oldPosition;
+
+                yield return Tick.Instance.Advance();
             }
             else
             {
                 pullStateComponent.ShouldPullPlayer = LayerMask.NameToLayer("Wall") == result.gameObject.layer;
+                pullStateComponent.ItemToPull = result.gameObject;
             }
-
-            yield return Tick.Instance.Advance();
         }
         while (result == null);
         shouldExit = true;
