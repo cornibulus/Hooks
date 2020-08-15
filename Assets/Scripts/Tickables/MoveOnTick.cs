@@ -8,7 +8,7 @@ public class MoveOnTick : Tickable
 
     public LayerMask layerMask;
 
-    private bool isDoneMoving = false;
+    protected bool isDoneMoving = false;
 
     public override void Tick()
     {
