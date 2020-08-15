@@ -8,8 +8,7 @@ public class SpringMoveStateComponent : StateComponent
 
     public GameObject ObjectToMove { get; set; }
     public State PreviousState { get; set; }
-
-    public Vector2Int direction = Vector2Int.up;
+    public Vector2Int Direction { get; set; }
 
     public LayerMask layerMask;
 
@@ -17,7 +16,7 @@ public class SpringMoveStateComponent : StateComponent
     {
         bool isMovingPlayer = ObjectToMove == Player.Instance.gameObject;
         Collider2D result = Physics2D.OverlapPoint(
-                new Vector2(ObjectToMove.transform.position.x, ObjectToMove.transform.position.y) + this.direction,
+                new Vector2(ObjectToMove.transform.position.x, ObjectToMove.transform.position.y) + this.Direction,
                 layerMask);
         GameObject[] chains = null;
         PullStateComponent psc = PreviousState.GetComponent<PullStateComponent>();
@@ -32,21 +31,21 @@ public class SpringMoveStateComponent : StateComponent
             //move
             Vector3 oldPosition = ObjectToMove.transform.position;
             ObjectToMove.transform.position = new Vector3(
-                ObjectToMove.transform.position.x + this.direction.x,
-                ObjectToMove.transform.position.y + this.direction.y);
+                ObjectToMove.transform.position.x + this.Direction.x,
+                ObjectToMove.transform.position.y + this.Direction.y);
 
             if(chains != null)
             {
                 foreach(GameObject chain in chains)
                 {
                     chain.transform.position = new Vector3(
-                        chain.transform.position.x + this.direction.x,
-                        chain.transform.position.y + this.direction.y);
+                        chain.transform.position.x + this.Direction.x,
+                        chain.transform.position.y + this.Direction.y);
                 }
             }
 
             result = Physics2D.OverlapPoint(
-                new Vector2(ObjectToMove.transform.position.x, ObjectToMove.transform.position.y) + this.direction,
+                new Vector2(ObjectToMove.transform.position.x, ObjectToMove.transform.position.y) + this.Direction,
                 layerMask);
 
             yield return isMovingPlayer ? Tick.Instance.Advance() : Tick.Instance.DontAdvance();
