@@ -5,7 +5,6 @@ using UnityEngine;
 public class HookMoveStateComponent : StateComponent
 {
     public GameObject hook;
-    public float tickTime = 1f;
     public State overrideState;
     private bool shouldExit = false;
 
@@ -13,6 +12,7 @@ public class HookMoveStateComponent : StateComponent
 
     [Header("For collision detection")]
     public LayerMask layerMask;
+
     public Vector2Int moveDirection = Vector2Int.right;
 
     private Collider2D[] results = new Collider2D[5];
@@ -28,7 +28,7 @@ public class HookMoveStateComponent : StateComponent
                 results,
                 layerMask);
 
-            //TODO invoke tick event
+            Tick.Instance.Advance();
 
             if(resultsCount == 0)
             {
@@ -44,7 +44,7 @@ public class HookMoveStateComponent : StateComponent
                 instance.transform.position = oldPosition;
             }
 
-            yield return new WaitForSeconds(tickTime);
+            yield return new WaitForSeconds(Tick.Instance.seconds);
         }
         while (resultsCount == 0);
         shouldExit = true;
