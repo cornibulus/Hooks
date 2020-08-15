@@ -2,30 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tick : MonoBehaviour
-{
-    public float seconds = 1f;
+public class Player : Tickable {
 
-    List<Tickable> tickables = new List<Tickable>();
+    public LayerMask enemyLayerMask;
 
-    private void Start()
+    public override void Tick()
     {
-        tickables.AddRange(FindObjectsOfType<Tickable>());
+        Collider2D enemy = Physics2D.OverlapPoint(
+               new Vector2(transform.position.x, transform.position.y),
+               enemyLayerMask);
+
+        if(enemy != null)
+        {
+            Debug.Log("Game Over");
+        }
     }
-
-    public WaitForSeconds Advance()
-    {
-        tickables.ForEach(t => t.Tick());
-
-        return new WaitForSeconds(seconds);
-    }
-
 
 
     //Singleton boilerplate
-    private static Tick _instance;
+    private static Player _instance;
 
-    public static Tick Instance
+    public static Player Instance
     {
         get
         {

@@ -12,7 +12,6 @@ public class PullStateComponent : StateComponent {
     private bool shouldExit = false;
 
     public GameObject hook;
-    public GameObject player;
 
     IEnumerator Pull()
     {
@@ -25,7 +24,7 @@ public class PullStateComponent : StateComponent {
                 Vector3 hookPos = hook.transform.position;
                 Vector3 pos = chain.transform.position;
                 GameObject.Destroy(chain);
-                player.transform.position = pos;
+                Player.Instance.transform.position = pos;
                 hook.transform.position = hookPos;
             }
             else

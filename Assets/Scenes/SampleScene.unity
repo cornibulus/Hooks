@@ -632,6 +632,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: {fileID: 566219298}
+--- !u!114 &324955582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 324955579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8115675c74df32c42a39cd335957e930, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyLayerMask:
+    serializedVersion: 2
+    m_Bits: 1024
 --- !u!1001 &385412788
 Prefab:
   m_ObjectHideFlags: 0
@@ -875,7 +889,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   overrideState: {fileID: 313214214}
   hook: {fileID: 313214212}
-  player: {fileID: 324955579}
 --- !u!114 &446639246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1256,7 +1269,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   overrideState: {fileID: 284731258}
   hook: {fileID: 284731256}
-  player: {fileID: 324955579}
 --- !u!114 &723015830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1385,7 +1397,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   overrideState: {fileID: 566219298}
   hook: {fileID: 566219296}
-  player: {fileID: 324955579}
 --- !u!114 &992764959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1422,7 +1433,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4131596066289390, guid: f42b2020c0879d54ca8457a98b271a7c, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4131596066289390, guid: f42b2020c0879d54ca8457a98b271a7c, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1447,6 +1458,15 @@ Prefab:
     - target: {fileID: 4131596066289390, guid: f42b2020c0879d54ca8457a98b271a7c, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 212912401191857496, guid: f42b2020c0879d54ca8457a98b271a7c,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1467339457650950, guid: f42b2020c0879d54ca8457a98b271a7c, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f42b2020c0879d54ca8457a98b271a7c, type: 2}
@@ -2168,6 +2188,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 566219299}
+--- !u!1 &1787551968 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1467339457650950, guid: f42b2020c0879d54ca8457a98b271a7c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1063804194}
+--- !u!61 &1787551969
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1787551968}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 0.25, y: 0.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1844465185
 GameObject:
   m_ObjectHideFlags: 0
@@ -2224,7 +2274,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   overrideState: {fileID: 385412791}
   hook: {fileID: 385412789}
-  player: {fileID: 324955579}
 --- !u!114 &1844465189
 MonoBehaviour:
   m_ObjectHideFlags: 0
