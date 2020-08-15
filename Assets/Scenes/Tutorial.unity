@@ -1105,7 +1105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 537cf00b4fc518740b05828310907318, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  number: 0
+  number: 1
   digitPrefabs:
   - {fileID: 1591069716869962, guid: 97a66359048757b43a5a065dd7c4b325, type: 2}
   - {fileID: 1406954442256590, guid: 7733fac0d1d7ec84caf3518e1e62b104, type: 2}
