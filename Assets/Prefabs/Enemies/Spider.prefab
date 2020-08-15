@@ -82,7 +82,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 768
-  prefab: {fileID: 0}
+  prefab: {fileID: 1397058753878774, guid: 3d6a1fe6770edcd43b1b9127affdf334, type: 2}
 --- !u!212 &212428903617551564
 SpriteRenderer:
   m_ObjectHideFlags: 1
