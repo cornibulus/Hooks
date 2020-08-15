@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Player : Tickable {
 
     public LayerMask enemyLayerMask;
+
+    public UnityEvent gameOverEvent = new UnityEvent();
 
     public override void Tick()
     {
@@ -14,7 +17,7 @@ public class Player : Tickable {
 
         if(enemy != null)
         {
-            Debug.Log("Game Over");
+            gameOverEvent.Invoke();
         }
     }
 
