@@ -12,6 +12,7 @@ public class DrawStateComponent : StateComponent
     }
 
     public override void Enter()
+
     {
         if (sprite != null)
             sprite.enabled = true;
