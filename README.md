@@ -1,7 +1,7 @@
 # Hooks
  https://itch.io/jam/miz-jam-1
 
-Elapsed time: 6:12:02
+Elapsed time: 6:26:10
 
 
 TODO for each scene
