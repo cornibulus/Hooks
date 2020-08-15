@@ -930,6 +930,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   key: 97
   overrideState: {fileID: 284731258}
+--- !u!4 &566219307 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4499942759758302, guid: 4c2e3eaf5f14ae749b1d56a98b038a96,
+    type: 2}
+  m_PrefabInternal: {fileID: 566219295}
+--- !u!114 &566219308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 566219296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bafcd6e5a8a86ba45acb7e6ba93ddfb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: 32
+  overrideState: {fileID: 1597089992}
 --- !u!1001 &1063804194
 Prefab:
   m_ObjectHideFlags: 0
@@ -1454,7 +1472,7 @@ CompositeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
+  m_GeometryType: 1
   m_GenerationType: 0
   m_EdgeRadius: 0
   m_ColliderPaths:
@@ -1507,3 +1525,77 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &1597089989
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1597089990}
+  - component: {fileID: 1597089992}
+  - component: {fileID: 1597089991}
+  - component: {fileID: 1597089993}
+  m_Layer: 0
+  m_Name: Hook Move R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1597089990
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1597089989}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 566219307}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1597089991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1597089989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1681006dfa051b54a94acba09298aa44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hook: {fileID: 566219296}
+  tickTime: 1
+  overrideState: {fileID: 566219298}
+  chainPrefab: {fileID: 1365092461452330, guid: 5992f4b583c1f4944b49f4eebb1098c6,
+    type: 2}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  moveDirection: {x: 1, y: 0}
+--- !u!114 &1597089992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1597089989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8d68ab2cec53ad49aa78c92da45e8e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1597089993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1597089989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee5a0491d514a8149a7527dfc1ebf71f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 566219299}
