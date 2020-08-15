@@ -48,17 +48,13 @@ public class PullStateComponent : StateComponent {
 
     public override State Execute()
     {
-        if (this.shouldExit)
-            return overrideState;
-
-        return null;
+        return shouldExit ? overrideState : null;
     }
 
     public override void Exit()
     {
+        StopAllCoroutines();
         this.shouldExit = false;
-        chains.Clear();
-        chains = new LinkedList<GameObject>();
     }
 
     public override StateComponentType GetStateComponentType()

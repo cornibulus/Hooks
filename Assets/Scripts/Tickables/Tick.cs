@@ -20,7 +20,10 @@ public class Tick : MonoBehaviour
         return new WaitForSeconds(seconds);
     }
 
-
+    public WaitForSeconds DontAdvance()
+    {
+        return new WaitForSeconds(seconds);
+    }
 
     //Singleton boilerplate
     private static Tick _instance;

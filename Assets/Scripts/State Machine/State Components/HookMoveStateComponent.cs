@@ -61,17 +61,22 @@ public class HookMoveStateComponent : StateComponent
         {
             throw new MissingReferenceException("No hook assigned to " + this.name);
         }
+
+        //don't even start if we find a collision
+        if (Physics2D.OverlapPoint(
+                hook.transform.position,
+                layerMask) != null)
+        {
+            this.shouldExit = true;
+            return;
+        }
+
         StartCoroutine(CheckAndMove());
     }
 
     public override State Execute()
     {
-        if(this.shouldExit)
-        {
-            return pullState;
-        }
-
-        return null;
+        return shouldExit ? pullState : null;
     }
 
     public override void Exit()
