@@ -6,9 +6,9 @@ public class Tick : MonoBehaviour
 {
     public float seconds = 1f;
 
-    public void Advance()
+    public WaitForSeconds Advance()
     {
-        //TODO
+        return new WaitForSeconds(seconds);
     }
 
 

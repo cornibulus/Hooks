@@ -5,7 +5,7 @@ using UnityEngine;
 public class HookMoveStateComponent : StateComponent
 {
     public GameObject hook;
-    public State overrideState;
+    public State pullState;
     private bool shouldExit = false;
 
     public GameObject chainPrefab;
@@ -14,23 +14,24 @@ public class HookMoveStateComponent : StateComponent
     public LayerMask layerMask;
 
     public Vector2Int moveDirection = Vector2Int.right;
+    private PullStateComponent pullStateComponent;
 
-    private Collider2D[] results = new Collider2D[5];
+    private void Awake()
+    {
+        this.pullStateComponent = this.pullState.GetComponent<PullStateComponent>();
+    }
 
     IEnumerator CheckAndMove()
     {
-        int resultsCount = 0;
+        Collider2D result;
         do
         {
             //check one time further
-            resultsCount = Physics2D.OverlapPointNonAlloc(
+            result = Physics2D.OverlapPoint(
                 new Vector2(hook.transform.position.x, hook.transform.position.y) + this.moveDirection,
-                results,
                 layerMask);
 
-            Tick.Instance.Advance();
-
-            if(resultsCount == 0)
+            if(result == null)
             {
                 //move
                 Vector3 oldPosition = hook.transform.position;
@@ -38,15 +39,19 @@ public class HookMoveStateComponent : StateComponent
                         hook.transform.position.x + this.moveDirection.x,
                         hook.transform.position.y + this.moveDirection.y
                     );
-
-                //spawn chain TODO on a specific cleanup object
+                
                 GameObject instance = GameObject.Instantiate(chainPrefab);
+                pullStateComponent.chains.AddLast(instance);
                 instance.transform.position = oldPosition;
             }
+            else
+            {
+                pullStateComponent.ShouldPullPlayer = LayerMask.NameToLayer("Wall") == result.gameObject.layer;
+            }
 
-            yield return new WaitForSeconds(Tick.Instance.seconds);
+            yield return Tick.Instance.Advance();
         }
-        while (resultsCount == 0);
+        while (result == null);
         shouldExit = true;
     }
 
@@ -63,7 +68,7 @@ public class HookMoveStateComponent : StateComponent
     {
         if(this.shouldExit)
         {
-            return overrideState;
+            return pullState;
         }
 
         return null;
