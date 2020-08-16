@@ -38,6 +38,9 @@ public class PullStateComponent : StateComponent {
                 hook.transform.position = pos;
             }
 
+            if (SoundManager.Instance != null)
+                SoundManager.Instance.PlayPullAudio();
+
             yield return Tick.Instance.Advance();
         }
         this.shouldExit = true;

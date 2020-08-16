@@ -6,10 +6,22 @@ public class SoundManager : MonoBehaviour {
     public bool IsOn { get; set; }
 
     public AudioSource hookAudio;
+    public AudioSource pullAudio;
+    public AudioSource unlockAudio;
 
     public void PlayHookAudio()
     {
         PlayAudioIfOn(hookAudio);
+    }
+
+    public void PlayPullAudio()
+    {
+        PlayAudioIfOn(pullAudio);
+    }
+
+    public void PlayUnlockAudio()
+    {
+        PlayAudioIfOn(unlockAudio);
     }
 
     private void PlayAudioIfOn(AudioSource audioSource)

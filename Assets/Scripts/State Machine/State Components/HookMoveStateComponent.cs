@@ -28,15 +28,24 @@ public class HookMoveStateComponent : StateComponent
         {
             //check one time further
             result = Physics2D.OverlapPoint(
-                new Vector2(hook.transform.position.x, hook.transform.position.y) + this.moveDirection,
+                (Vector2) hook.transform.position + this.moveDirection,
                 layerMask);
 
             if (result == null || (result != null && "Lock" == result.tag && Player.Instance.Keys > 0))
             {
                 if (result != null && "Lock" == result.tag) //hit lock
                 {
+                    if (SoundManager.Instance != null)
+                        SoundManager.Instance.PlayUnlockAudio();
                     Player.Instance.Keys--;
                     GameObject.Destroy(result.gameObject);
+                }
+
+                //Play sound one tick early because it sounds delayed otherwise
+                if (Physics2D.OverlapPoint((Vector2)hook.transform.position + this.moveDirection * 2, layerMask) != null)
+                {
+                    if (SoundManager.Instance != null)
+                        SoundManager.Instance.PlayHookAudio();
                 }
 
                 //move
@@ -49,13 +58,11 @@ public class HookMoveStateComponent : StateComponent
                 GameObject instance = GameObject.Instantiate(chainPrefab);
                 pullStateComponent.chains.AddLast(instance);
                 instance.transform.position = oldPosition;
-
+                
                 yield return Tick.Instance.Advance();
             }
             else //hit
             {
-                if (SoundManager.Instance != null)
-                    SoundManager.Instance.PlayHookAudio();
                 pullStateComponent.ShouldPullPlayer = LayerMask.NameToLayer("Wall") == result.gameObject.layer;
                 pullStateComponent.ItemToPull = result.gameObject;
             }
