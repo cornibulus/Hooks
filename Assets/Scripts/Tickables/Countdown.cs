@@ -19,6 +19,8 @@ public class Countdown : Tickable {
             if (MusicManager.Instance != null)
                 MusicManager.Instance.PlayWinAudio();
 
+            Player.Instance.InterruptChildCoroutines();
+
             timeUpEvent.Invoke();
         }
     }

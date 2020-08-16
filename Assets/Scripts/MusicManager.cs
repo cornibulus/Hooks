@@ -9,6 +9,10 @@ public class MusicManager : MonoBehaviour
     public AudioSource winAudio;
     public AudioSource failAudio;
 
+    private void OnLevelWasLoaded()
+    {
+
+    }
 
     public void PlayWinAudio()
     {

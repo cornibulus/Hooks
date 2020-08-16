@@ -30,6 +30,8 @@ public class Player : Tickable {
             if (MusicManager.Instance != null)
                 MusicManager.Instance.PlayFailAudio();
 
+            InterruptChildCoroutines();
+
             gameOverEvent.Invoke();
         }
 
@@ -42,6 +44,11 @@ public class Player : Tickable {
             Destroy(key.gameObject);
             Keys++;
         }
+    }
+
+    public void InterruptChildCoroutines()
+    {
+        BroadcastMessage("StopAllCoroutines");
     }
 
     private void Update()
