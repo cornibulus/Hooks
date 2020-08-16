@@ -33,7 +33,7 @@ public class HookMoveStateComponent : StateComponent
 
             if (result == null || (result != null && "Lock" == result.tag && Player.Instance.Keys > 0))
             {
-                if (result != null && "Lock" == result.tag)
+                if (result != null && "Lock" == result.tag) //hit lock
                 {
                     Player.Instance.Keys--;
                     GameObject.Destroy(result.gameObject);
@@ -52,8 +52,10 @@ public class HookMoveStateComponent : StateComponent
 
                 yield return Tick.Instance.Advance();
             }
-            else
+            else //hit
             {
+                if (SoundManager.Instance != null)
+                    SoundManager.Instance.PlayHookAudio();
                 pullStateComponent.ShouldPullPlayer = LayerMask.NameToLayer("Wall") == result.gameObject.layer;
                 pullStateComponent.ItemToPull = result.gameObject;
             }
