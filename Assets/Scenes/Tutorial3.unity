@@ -7403,55 +7403,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6071a175ac4e2f5448b94a6a09ffac2f, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &1660953017 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1149832694785220, guid: 6071a175ac4e2f5448b94a6a09ffac2f,
-    type: 2}
-  m_PrefabInternal: {fileID: 1660953016}
---- !u!114 &1660953018
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1660953017}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03a8bf9722495f04dae7f1e929ceb3ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enterEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1660953019}
-        m_MethodName: Transition
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1660953020}
-          m_ObjectArgumentAssemblyTypeName: State, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  exitEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &1660953019 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114575109950650530, guid: 6071a175ac4e2f5448b94a6a09ffac2f,
-    type: 2}
-  m_PrefabInternal: {fileID: 1660953016}
-  m_Script: {fileID: 11500000, guid: e7270129f3b4ce4408a4c323a35ec75e, type: 3}
---- !u!114 &1660953020 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114078437291974678, guid: 6071a175ac4e2f5448b94a6a09ffac2f,
-    type: 2}
-  m_PrefabInternal: {fileID: 1660953016}
-  m_Script: {fileID: 11500000, guid: a8d68ab2cec53ad49aa78c92da45e8e4, type: 3}
 --- !u!1001 &1667283732
 Prefab:
   m_ObjectHideFlags: 0
