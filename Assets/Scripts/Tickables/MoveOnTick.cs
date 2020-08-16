@@ -9,6 +9,7 @@ public class MoveOnTick : Tickable
     public LayerMask layerMask;
 
     protected bool isDoneMoving = false;
+    public bool shouldDestroyWhenDoneMoving = true;
 
     public override void Tick()
     {
@@ -31,6 +32,14 @@ public class MoveOnTick : Tickable
         else
         {
             isDoneMoving = true;
+        }
+    }
+
+    private void Update()
+    {
+        if(this.shouldDestroyWhenDoneMoving && this.isDoneMoving)
+        {
+            Destroy(this.gameObject);
         }
     }
 }
