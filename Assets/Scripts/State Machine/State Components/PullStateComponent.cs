@@ -34,7 +34,7 @@ public class PullStateComponent : StateComponent {
                 chains.RemoveLast();
                 Vector3 pos = chain.transform.position;
                 GameObject.Destroy(chain);
-                ItemToPull.transform.position = hook.transform.position;
+                ItemToPull.transform.position -= (hook.transform.position - pos);
                 hook.transform.position = pos;
             }
 
