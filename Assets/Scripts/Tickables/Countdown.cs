@@ -14,7 +14,11 @@ public class Countdown : Tickable {
         {
             numberDisplay.number--;
         }
-        else
+    }
+
+    public void Update()
+    {
+        if(numberDisplay != null && numberDisplay.number <= 0)
         {
             if (MusicManager.Instance != null)
                 MusicManager.Instance.PlayWinAudio();
