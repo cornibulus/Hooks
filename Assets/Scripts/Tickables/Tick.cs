@@ -6,16 +6,9 @@ public class Tick : MonoBehaviour
 {
     public float seconds = 1f;
 
-    List<Tickable> tickables = new List<Tickable>();
-
-    private void Start()
-    {
-        tickables.AddRange(FindObjectsOfType<Tickable>());
-    }
-
     public WaitForSeconds Advance()
     {
-        tickables.ForEach(t => t.Tick());
+        new List<Tickable>(FindObjectsOfType<Tickable>()).ForEach(t => t.Tick());
 
         return new WaitForSeconds(seconds);
     }
