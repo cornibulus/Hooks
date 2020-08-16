@@ -12,6 +12,7 @@ public class Player : Tickable {
     public UnityEvent gameOverEvent = new UnityEvent();
 
     public int Keys { get; set; }
+    public NumberDisplay keyDisplay;
 
     void Start()
     {
@@ -40,6 +41,11 @@ public class Player : Tickable {
         }
     }
 
+    private void Update()
+    {
+        if (keyDisplay != null)
+            keyDisplay.number = Keys;
+    }
 
     //Singleton boilerplate
     private static Player _instance;
