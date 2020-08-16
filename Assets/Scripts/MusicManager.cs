@@ -9,20 +9,38 @@ public class MusicManager : MonoBehaviour
     public AudioSource winAudio;
     public AudioSource failAudio;
 
+    private AudioSource levelAudio;
+
     private void OnLevelWasLoaded()
     {
+        levelAudio = null;
 
+        GameObject levelAudioObj = GameObject.FindWithTag("LevelAudio");
+        if(levelAudioObj != null)
+        {
+            this.levelAudio = levelAudioObj.GetComponent<AudioSource>();
+        }
+
+        if(levelAudio != null)
+        {
+            levelAudio.mute = !this.IsOn;
+            levelAudio.Play();
+        }
     }
 
     public void PlayWinAudio()
     {
-        //interrupt level music
+        if (levelAudio != null && levelAudio.isPlaying)
+            levelAudio.Stop();
+
         PlayAudioIfOn(winAudio);
     }
 
     public void PlayFailAudio()
     {
-        //interrupt level music
+        if (levelAudio != null && levelAudio.isPlaying)
+            levelAudio.Stop();
+
         PlayAudioIfOn(failAudio);
     }
 
@@ -30,6 +48,12 @@ public class MusicManager : MonoBehaviour
     {
         if (this.IsOn && audioSource != null && !audioSource.isPlaying)
             audioSource.Play();
+    }
+
+    private void Update()
+    {
+        if(levelAudio != null)
+            levelAudio.mute = !this.IsOn;
     }
 
     //Singleton boilerplate

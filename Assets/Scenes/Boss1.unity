@@ -1800,6 +1800,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0903965804263954da9adef76bec8600, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &338515371
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4144556810420868, guid: 49abce63000369f4b8681850c0d24b2f, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 4.8179464
+      objectReference: {fileID: 0}
+    - target: {fileID: 4144556810420868, guid: 49abce63000369f4b8681850c0d24b2f, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -7.2500734
+      objectReference: {fileID: 0}
+    - target: {fileID: 4144556810420868, guid: 49abce63000369f4b8681850c0d24b2f, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.17106985
+      objectReference: {fileID: 0}
+    - target: {fileID: 4144556810420868, guid: 49abce63000369f4b8681850c0d24b2f, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4144556810420868, guid: 49abce63000369f4b8681850c0d24b2f, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4144556810420868, guid: 49abce63000369f4b8681850c0d24b2f, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4144556810420868, guid: 49abce63000369f4b8681850c0d24b2f, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4144556810420868, guid: 49abce63000369f4b8681850c0d24b2f, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 49abce63000369f4b8681850c0d24b2f, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &360446946
 GameObject:
   m_ObjectHideFlags: 0
@@ -5746,7 +5788,7 @@ Transform:
   - {fileID: 1582898207}
   - {fileID: 518677678}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1471219831
 GameObject:
@@ -5778,7 +5820,7 @@ Transform:
   - {fileID: 617572011}
   - {fileID: 1366180905}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1487335449
 GameObject:
@@ -7336,7 +7378,7 @@ Transform:
   - {fileID: 2050803246}
   - {fileID: 133913529}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1735246621
 GameObject:
@@ -8629,7 +8671,7 @@ Transform:
   - {fileID: 1133627993}
   - {fileID: 1927875091}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1977626399
 MonoBehaviour:
@@ -8659,6 +8701,9 @@ MonoBehaviour:
   enemyLayerMask:
     serializedVersion: 2
     m_Bits: 1024
+  keyLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
   gameOverEvent:
     m_PersistentCalls:
       m_Calls:
@@ -8675,6 +8720,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  keyDisplay: {fileID: 0}
 --- !u!61 &1977626401
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8780,7 +8826,7 @@ Transform:
   - {fileID: 1084898489}
   - {fileID: 253025862}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1980454038
 GameObject:
@@ -8861,7 +8907,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1984996608
 GameObject:
@@ -9027,6 +9073,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transformToMirror: {fileID: 1977626398}
+  offset: {x: 0, y: 0}
   x: 1
   y: 0
 --- !u!114 &2019018278
@@ -9043,6 +9090,7 @@ MonoBehaviour:
   prefab: {fileID: 1577041221505506, guid: 7856172e04c23e14997d786b84fa387b, type: 2}
   interval: 5
   spawnPosition: {fileID: 330684574}
+  optionalDisplay: {fileID: 0}
 --- !u!4 &2019018281 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4650698026127736, guid: 7856172e04c23e14997d786b84fa387b,
