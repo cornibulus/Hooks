@@ -27,6 +27,7 @@ TextureImporter:
     21300044: monochrome_transparent_packed_22
     21300046: monochrome_transparent_packed_23
     21300048: monochrome_transparent_packed_24
+    21300050: monochrome_transparent_packed_25
   externalObjects: {}
   serializedVersion: 6
   mipmaps:
@@ -619,13 +620,33 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: ddb63b640e200a54db99307fb4f334d9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monochrome_transparent_packed_25
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 336
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56a5bd72754ee03408aa800b3c66f5e3
       vertices: []
       indices: 
       edges: []
