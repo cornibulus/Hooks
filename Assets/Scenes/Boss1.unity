@@ -1049,7 +1049,7 @@ Tilemap:
   - first: {x: -9, y: 1, z: 0}
     second:
       m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileSpriteIndex: 3
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -1192,14 +1192,14 @@ Tilemap:
   - m_RefCount: 0
     m_Data: {fileID: 0}
   m_TileSpriteArray:
-  - m_RefCount: 1
-    m_Data: {fileID: 21300618, guid: e98c012d0b57f3f4dae5e2a3faff3f28, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 13
     m_Data: {fileID: 21300620, guid: e98c012d0b57f3f4dae5e2a3faff3f28, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300622, guid: e98c012d0b57f3f4dae5e2a3faff3f28, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300618, guid: e98c012d0b57f3f4dae5e2a3faff3f28, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 15
     m_Data:
@@ -8888,7 +8888,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300058, guid: 4d0a4f7d313f7904d96841f6c9a9d2ff,
+      objectReference: {fileID: 21300014, guid: 82e7616a6023ac143b49bfba8949c7f4,
         type: 3}
     - target: {fileID: 212766191533700094, guid: 7856172e04c23e14997d786b84fa387b,
         type: 2}
