@@ -27,6 +27,9 @@ public class Player : Tickable {
 
         if(enemy != null)
         {
+            if (MusicManager.Instance != null)
+                MusicManager.Instance.PlayFailAudio();
+
             gameOverEvent.Invoke();
         }
 

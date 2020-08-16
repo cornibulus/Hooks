@@ -16,6 +16,9 @@ public class Countdown : Tickable {
         }
         else
         {
+            if (MusicManager.Instance != null)
+                MusicManager.Instance.PlayWinAudio();
+
             timeUpEvent.Invoke();
         }
     }
