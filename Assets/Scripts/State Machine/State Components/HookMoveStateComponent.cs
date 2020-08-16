@@ -31,8 +31,14 @@ public class HookMoveStateComponent : StateComponent
                 new Vector2(hook.transform.position.x, hook.transform.position.y) + this.moveDirection,
                 layerMask);
 
-            if (result == null)
+            if (result == null || (result != null && "Lock" == result.tag && Player.Instance.Keys > 0))
             {
+                if (result != null && "Lock" == result.tag)
+                {
+                    Player.Instance.Keys--;
+                    GameObject.Destroy(result.gameObject);
+                }
+
                 //move
                 Vector3 oldPosition = hook.transform.position;
                 hook.transform.position = new Vector3(

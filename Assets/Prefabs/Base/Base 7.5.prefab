@@ -3777,6 +3777,9 @@ MonoBehaviour:
   enemyLayerMask:
     serializedVersion: 2
     m_Bits: 1024
+  keyLayerMask:
+    serializedVersion: 2
+    m_Bits: 2048
   gameOverEvent:
     m_PersistentCalls:
       m_Calls:

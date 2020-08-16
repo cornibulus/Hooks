@@ -239,6 +239,9 @@ MonoBehaviour:
   enemyLayerMask:
     serializedVersion: 2
     m_Bits: 1024
+  keyLayerMask:
+    serializedVersion: 2
+    m_Bits: 2048
   gameOverEvent:
     m_PersistentCalls:
       m_Calls:
@@ -255,6 +258,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  keys: 0
 --- !u!61 &16584826
 BoxCollider2D:
   m_ObjectHideFlags: 0

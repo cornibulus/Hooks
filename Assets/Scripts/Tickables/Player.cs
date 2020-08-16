@@ -7,7 +7,16 @@ public class Player : Tickable {
 
     public LayerMask enemyLayerMask;
 
+    public LayerMask keyLayerMask;
+
     public UnityEvent gameOverEvent = new UnityEvent();
+
+    public int Keys { get; set; }
+
+    void Start()
+    {
+        Keys = 0;
+    }
 
     public override void Tick()
     {
@@ -18,6 +27,16 @@ public class Player : Tickable {
         if(enemy != null)
         {
             gameOverEvent.Invoke();
+        }
+
+        Collider2D key = Physics2D.OverlapPoint(
+               new Vector2(transform.position.x, transform.position.y),
+               keyLayerMask);
+
+        if(key != null)
+        {
+            Destroy(key.gameObject);
+            Keys++;
         }
     }
 
