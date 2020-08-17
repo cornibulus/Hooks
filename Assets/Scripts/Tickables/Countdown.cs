@@ -7,6 +7,7 @@ public class Countdown : Tickable {
 
     public NumberDisplay numberDisplay;
     public UnityEvent timeUpEvent = new UnityEvent();
+    private bool hasFired = false;
 
     public override void Tick()
     {
@@ -18,7 +19,7 @@ public class Countdown : Tickable {
 
     public void Update()
     {
-        if(numberDisplay != null && numberDisplay.number <= 0)
+        if(!hasFired && numberDisplay != null && numberDisplay.number <= 0)
         {
             if (MusicManager.Instance != null)
                 MusicManager.Instance.PlayWinAudio();
