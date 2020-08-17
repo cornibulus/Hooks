@@ -128,10 +128,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55f34e0d3754b1245bde162818df560a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  direction: {x: 0, y: 1}
   layerMask:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 768
 --- !u!114 &114349722662338046
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -143,6 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1e4a04b991afea41987bb287d2cb27d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  direction: {x: 0, y: 1}
   overrideState: {fileID: 114176866285437270}
 --- !u!114 &114656221358582086
 MonoBehaviour:
