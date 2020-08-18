@@ -17,6 +17,8 @@ public class Player : Tickable {
     void Start()
     {
         Keys = 0;
+        if (this.keyDisplay == null && GameObject.FindGameObjectWithTag("KeyCount") != null)
+            this.keyDisplay = GameObject.FindGameObjectWithTag("KeyCount").GetComponent<NumberDisplay>();
     }
 
     public override void Tick()

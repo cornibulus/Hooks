@@ -6051,7 +6051,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  keyDisplay: {fileID: 0}
+  keyDisplay: {fileID: 1384391179}
 --- !u!61 &1007312751
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8486,6 +8486,12 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91a60c3914554cb41a23c76b8c3d9f57, type: 2}
   m_IsPrefabAsset: 0
+--- !u!114 &1384391179 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114702276728328224, guid: 91a60c3914554cb41a23c76b8c3d9f57,
+    type: 2}
+  m_PrefabInternal: {fileID: 1384391178}
+  m_Script: {fileID: 11500000, guid: 537cf00b4fc518740b05828310907318, type: 3}
 --- !u!1 &1405914088
 GameObject:
   m_ObjectHideFlags: 0

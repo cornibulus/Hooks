@@ -107,4 +107,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/L33.unity
     guid: e42ce07e61512fe40931f1dc709a8e42
+  - enabled: 1
+    path: Assets/Scenes/L34.unity
+    guid: 647bde04c8818984f8a9d7f94062f819
   m_configObjects: {}
