@@ -21,6 +21,6 @@ public class ClickListenerStateComponent : StateComponent
 
     public override StateComponentType GetStateComponentType()
     {
-        return StateComponentType.FIXED_UPDATE;
+        return StateComponentType.UPDATE;
     }
 }

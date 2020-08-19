@@ -12,13 +12,13 @@ public class Spring : MonoBehaviour
 
     private bool hasFired = false;
 
-    public void FixedUpdate()
+    public void Update()
     {
         if (hasFired)
             return;
 
         Collider2D overlap = Physics2D.OverlapPoint(
-               new Vector2(transform.position.x, transform.position.y), layerMask);
+               (Vector2) transform.position, layerMask);
         if (overlap == null)
             return;
 
