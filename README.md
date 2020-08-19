@@ -1,4 +1,4 @@
-# Hooks
+# Hook It and Book It
  https://itch.io/jam/miz-jam-1
 
 # Art Kit
