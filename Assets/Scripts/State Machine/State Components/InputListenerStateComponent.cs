@@ -9,7 +9,7 @@ public class InputListenerStateComponent : StateComponent {
 
     public override State Execute()
     {
-        if(Input.GetKey(key))
+        if(Input.GetKeyDown(key))
         {
             return overrideState;
         }
