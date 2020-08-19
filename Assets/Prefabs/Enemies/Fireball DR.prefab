@@ -79,7 +79,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c06dcc496f0e9b4f8a55ab59d184587, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 7
+  delay: 14
 --- !u!114 &114586270292549968
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -95,6 +95,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 768
+  shouldDestroyWhenDoneMoving: 1
 --- !u!212 &212714567331053616
 SpriteRenderer:
   m_ObjectHideFlags: 1
