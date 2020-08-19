@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4149004453329542}
   - component: {fileID: 212705539835878308}
+  - component: {fileID: 114730315366929994}
   m_Layer: 0
   m_Name: kc Ones
   m_TagString: Untagged
@@ -68,6 +69,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4473610732988228}
   - component: {fileID: 212839499214989798}
+  - component: {fileID: 114210803567804188}
   m_Layer: 0
   m_Name: kc Tens
   m_TagString: Untagged
@@ -159,6 +161,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114210803567804188
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1886569755423184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0903965804263954da9adef76bec8600, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114702276728328224
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -184,6 +197,17 @@ MonoBehaviour:
   - {fileID: 1714576771010276, guid: f81e658e3a369cb4ea500354d50baf08, type: 2}
   tensPosition: {fileID: 4473610732988228}
   onesPosition: {fileID: 4149004453329542}
+--- !u!114 &114730315366929994
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1243336925459990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0903965804263954da9adef76bec8600, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212705539835878308
 SpriteRenderer:
   m_ObjectHideFlags: 1
