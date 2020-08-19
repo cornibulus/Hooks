@@ -1801,7 +1801,7 @@ Transform:
   - {fileID: 942198661}
   - {fileID: 2142835101}
   m_Father: {fileID: 0}
-  m_RootOrder: 30
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &350352626
 GameObject:
@@ -3508,6 +3508,7 @@ GameObject:
   - component: {fileID: 687430212}
   - component: {fileID: 687430211}
   - component: {fileID: 687430210}
+  - component: {fileID: 687430215}
   m_Layer: 0
   m_Name: Scene Retry Screen
   m_TagString: Untagged
@@ -3597,6 +3598,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8d68ab2cec53ad49aa78c92da45e8e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &687430215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 687430208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee5a0491d514a8149a7527dfc1ebf71f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 855868895}
 --- !u!1 &691270159
 GameObject:
   m_ObjectHideFlags: 0
@@ -8125,6 +8138,7 @@ GameObject:
   - component: {fileID: 1324989147}
   - component: {fileID: 1324989146}
   - component: {fileID: 1324989145}
+  - component: {fileID: 1324989150}
   m_Layer: 0
   m_Name: Scene Advancement Screen
   m_TagString: Untagged
@@ -8214,6 +8228,18 @@ Transform:
   m_Father: {fileID: 1778120601}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1324989150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1324989143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dec127c1453ab6d4f95750072bbeafdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteParent: {fileID: 2068121118}
 --- !u!1 &1358764365
 GameObject:
   m_ObjectHideFlags: 0
@@ -9715,7 +9741,7 @@ Transform:
   - {fileID: 1324989149}
   - {fileID: 687430209}
   m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1778120602
 MonoBehaviour:
@@ -11419,7 +11445,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 32
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2133077710
 GameObject:
