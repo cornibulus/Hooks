@@ -155,6 +155,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   direction: {x: -1, y: 0}
   overrideState: {fileID: 114688839537307656}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 1025
 --- !u!212 &212142984687629350
 SpriteRenderer:
   m_ObjectHideFlags: 1

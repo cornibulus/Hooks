@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Player : Tickable {
+public class Player : MonoBehaviour {
 
     public LayerMask enemyLayerMask;
 
@@ -14,6 +14,8 @@ public class Player : Tickable {
     public int Keys { get; set; }
     public NumberDisplay keyDisplay;
 
+    private bool isGameOver = false;
+
     void Start()
     {
         Keys = 0;
@@ -21,14 +23,18 @@ public class Player : Tickable {
             this.keyDisplay = GameObject.FindGameObjectWithTag("KeyCount").GetComponent<NumberDisplay>();
     }
 
-    public override void Tick()
+    private void FixedUpdate()
     {
-        Collider2D enemy = Physics2D.OverlapPoint(
-               new Vector2(transform.position.x, transform.position.y),
-               enemyLayerMask);
+        if (isGameOver)
+            return;
 
-        if(enemy != null)
+        Collider2D enemy = Physics2D.OverlapPoint(
+        new Vector2(transform.position.x, transform.position.y),
+        enemyLayerMask);
+
+        if (enemy != null)
         {
+            isGameOver = true;
             if (MusicManager.Instance != null)
                 MusicManager.Instance.PlayFailAudio();
 
@@ -41,7 +47,7 @@ public class Player : Tickable {
                new Vector2(transform.position.x, transform.position.y),
                keyLayerMask);
 
-        if(key != null)
+        if (key != null)
         {
             Destroy(key.gameObject);
             Keys++;

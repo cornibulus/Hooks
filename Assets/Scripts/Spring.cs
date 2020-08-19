@@ -3,23 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
-public class Spring : Tickable
+public class Spring : MonoBehaviour
 {
 
     public Vector2Int direction = Vector2Int.up;
     public SpringMoveStateComponent overrideState;
+    public LayerMask layerMask;
 
     private bool hasFired = false;
 
-    public override void Tick()
+    public void FixedUpdate()
     {
         if (hasFired)
             return;
 
         Collider2D overlap = Physics2D.OverlapPoint(
-               new Vector2(transform.position.x, transform.position.y));
+               new Vector2(transform.position.x, transform.position.y), layerMask);
         if (overlap == null)
             return;
+
 
         StateMachine sm = overlap.GetComponent<StateMachine>();
         if(sm != null && Player.Instance.gameObject == sm.gameObject)

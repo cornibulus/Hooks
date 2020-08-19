@@ -130,6 +130,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   direction: {x: 1, y: 0}
   overrideState: {fileID: 114224601578552074}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 1025
 --- !u!114 &114224601578552074
 MonoBehaviour:
   m_ObjectHideFlags: 1
