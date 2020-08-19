@@ -21,6 +21,7 @@ public class Countdown : Tickable {
     {
         if(!hasFired && numberDisplay != null && numberDisplay.number <= 0)
         {
+            hasFired = true;
             if (MusicManager.Instance != null)
                 MusicManager.Instance.PlayWinAudio();
 
